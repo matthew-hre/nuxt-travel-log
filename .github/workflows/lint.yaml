@@ -24,7 +24,7 @@ jobs:
       - name: alejandra check
         run: nix develop -c alejandra --check .
 
-  prettier:
+  eslint:
     runs-on: ubuntu-latest
     timeout-minutes: 60
     steps:
