@@ -26,6 +26,11 @@ jobs:
 
   eslint:
     runs-on: ubuntu-latest
+    environment: Build
+    env:
+      NODE_ENV: development
+      TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
+      TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
